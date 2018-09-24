@@ -7,8 +7,9 @@ import { OperationModule } from './operation/operation.module';
 // import { DashBoardComponent } from './home/home.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'operation', pathMatch: 'full' },
   {
-    path: '',
+    path: 'operation',
     loadChildren: () => OperationModule
   },
   { path: 'login', component: LoginComponent },

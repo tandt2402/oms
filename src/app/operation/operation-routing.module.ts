@@ -5,7 +5,7 @@ import { ChannelAccountComponent } from './channel-account/channel-account.compo
 
 const routes: Routes = [
   {
-    path: 'operation',
+    path: '',
     children: [
       {
         path: '',
