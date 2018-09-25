@@ -17,7 +17,7 @@ import { ErrorComponent } from './500/500.component';
     AppComponent,
     LoginComponent,
     NotFoundComponent,
-    ErrorComponent
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,24 +1,30 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ReportMgmtComponent } from './report-mgmt/report-mgmt.component';
-import { ChannelAccountComponent } from './channel-account/channel-account.component';
-
+import { LabelMgmtComponent } from './label-mgmt/label-mgmt.component';
+import { OperationComponent } from './operation.component';
+import { AccountComponent } from './account/account.component';
+import { ChannelComponent } from './channel/channel.component';
 const routes: Routes = [
   {
     path: '',
+    component: OperationComponent,
     children: [
       {
         path: '',
-        redirectTo: 'operation-mgmt',
+        redirectTo: 'channel/all-channel',
         pathMatch: 'prefix'
       },
       {
-        path: 'channel-account',
-        component: ChannelAccountComponent
+        path: 'account',
+        component: AccountComponent
       },
       {
-        path: 'operation-mgmt',
-        component: ReportMgmtComponent
+        path: 'label-mgmt',
+        component: LabelMgmtComponent
+      },
+      {
+        path: 'channel/:channel-code',
+        component: ChannelComponent
       }
     ]
   }
